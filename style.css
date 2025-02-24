@@ -1,0 +1,41 @@
+.movie-image {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* or remove this and set a fixed height */    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .custom-container {
+    max-width: 1000px; /* or any width you prefer */
+    margin: 0 auto;   /* centers the container */
+  }
+  
+  
+  /* Specific movie images */
+  .movie-inception {
+    background-image: url('images/Inception.jpg');
+  }
+  
+  .movie-titanic {
+    background-image: url('images/Titanic.jpg');
+  }
+  
+  .movie-TheMatrix {
+    background-image: url('images/TheMatrix.jpg');
+  }
+  
+
+
+
+  .movie-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .movie-info {
+    padding: 15px;
+  }
+  
