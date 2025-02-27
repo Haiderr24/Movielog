@@ -38,31 +38,14 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form id="searchForm" class="d-flex">
+              <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+            </form>            
+        </div>
         </div>
       </nav>
      
-
-      <div class="container mt-4">
-        <h2>Movie List</h2>
-        <ul id="movieList" class="list-group"></ul>
-    </div>
-
-    <!-- <form id="addMovieForm" class="mt-4">
-        <div class="mb-3">
-          <label for="movieTitle" class="form-label">Movie Title</label>
-          <input type="text" class="form-control" id="movieTitle" placeholder="Enter movie title" required>
-        </div>
-        <div class="mb-3">
-          <label for="movieGenre" class="form-label">Genre</label>
-          <input type="text" class="form-control" id="movieGenre" placeholder="Enter genre" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Add Movie</button>
-    </form> -->
 
     <div class="container custom-container mt-4">
       <div class="row g-5">
@@ -73,6 +56,11 @@
             <div class="movie-info text-center">
               <h5 class="movie-title">Inception</h5>
               <p class="movie-subtitle">Sci-Fi</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
             </div>
           </div>
         </div>
@@ -83,6 +71,11 @@
             <div class="movie-info text-center">
               <h5 class="movie-title">Titanic</h5>
               <p class="movie-subtitle">Romance</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
             </div>
           </div>
         </div>
@@ -93,16 +86,186 @@
             <div class="movie-info text-center">
               <h5 class="movie-title">The Matrix</h5>
               <p class="movie-subtitle">Action</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
             </div>
           </div>
         </div>
-        <!-- More movie items will automatically wrap to the next row -->
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-aquietplace"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">A Quiet Place</h5>
+              <p class="movie-subtitle">Horror</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-avatar"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Avatar</h5>
+              <p class="movie-subtitle">Sci-Fi</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-avengers"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Avengers</h5>
+              <p class="movie-subtitle">Action</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-cars"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Cars</h5>
+              <p class="movie-subtitle">Animation</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-dune"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Dune</h5>
+              <p class="movie-subtitle">Sci-Fi</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-interstellar"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Interstellar</h5>
+              <p class="movie-subtitle">Sci-Fi</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-it"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">It</h5>
+              <p class="movie-subtitle">Horror</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-lalaland"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">La La Land</h5>
+              <p class="movie-subtitle">Romance</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-tokyodrift"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Tokyo Drift</h5>
+              <p class="movie-subtitle">Action</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-tronlegacy"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">Tron: Legacy</h5>
+              <p class="movie-subtitle">Sci-Fi</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-wolfofwallstreet"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">The Wolf of Wall Street</h5>
+              <p class="movie-subtitle">Comedy</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="movie-item">
+            <div class="movie-image movie-thehangover"></div>
+            <div class="movie-info text-center">
+              <h5 class="movie-title">The Hangover</h5>
+              <p class="movie-subtitle">Comedy</p>
+              <select class="form-select status-select" aria-label="Select movie status">
+                <option value="to-watch">To Watch</option>
+                <option value="watching">Watching</option>
+                <option value="watched">Watched</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    
+    </div>   
 
-
-    
+    <script src="index.js"></script>
 
 </body>
 
