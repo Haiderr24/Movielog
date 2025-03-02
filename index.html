@@ -45,11 +45,40 @@
         </div>
         </div>
       </nav>
+
+
+      <div class="container mt-4">
+        <h2>Add a Movie</h2>
+        <form id="addMovieForm" class="mb-4">
+          <div class="mb-3">
+            <label for="movieTitle" class="form-label">Movie Title</label>
+            <input type="text" class="form-control" id="movieTitle" placeholder="Enter movie title" required>
+          </div>
+          <div class="mb-3">
+            <label for="movieGenre" class="form-label">Genre</label>
+            <input type="text" class="form-control" id="movieGenre" placeholder="Enter genre" required>
+          </div>
+          <div class="mb-3">
+            <label for="movieImage" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="movieImage" placeholder="Enter image URL (optional)">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Movie</button>
+        </form>
+      </div>
+
+
+      <!-- Movie Grid -->
+    <div class="container custom-container mt-4">
+      <div class="row" id="moviesContainer">
+        <!-- Movie cards will be injected here -->
+      </div>
+    </div>
+      
+
      
 
     <div class="container custom-container mt-4">
       <div class="row g-5">
-        <!-- Movie Item 1 -->
         <div class="col-md-4 col-sm-6">
           <div class="movie-item">
             <div class="movie-image movie-inception"></div>
@@ -64,7 +93,6 @@
             </div>
           </div>
         </div>
-        <!-- Movie Item 2 -->
         <div class="col-md-4 col-sm-6">
           <div class="movie-item">
             <div class="movie-image movie-titanic"></div>
@@ -79,7 +107,6 @@
             </div>
           </div>
         </div>
-        <!-- Movie Item 3 -->
         <div class="col-md-4 col-sm-6">
           <div class="movie-item">
             <div class="movie-image movie-TheMatrix"></div>
@@ -265,6 +292,7 @@
       </div>
     </div>   
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
 
 </body>
