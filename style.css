@@ -24,9 +24,6 @@
 
   
   /* Specific movie images */
-  .movie-inception {
-    background-image: url('images/Inception.jpg');
-  }
   .movie-titanic {
     background-image: url('images/Titanic.jpg');
   }
