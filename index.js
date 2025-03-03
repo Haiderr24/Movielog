@@ -1,6 +1,3 @@
-/********************************************************
- 1) TMDB Configuration & Helper Functions
-********************************************************/
 let tmdbConfig = null;
 
 function fetchTmdbConfig() {
@@ -40,9 +37,7 @@ function searchTmdbMovie(movieTitle) {
     });
 }
 
-/********************************************************
- 2) LocalStorage Functions
-********************************************************/
+
 function loadMovies() {
   const storedMovies = localStorage.getItem('movies');
   return storedMovies ? JSON.parse(storedMovies) : [];
@@ -52,9 +47,7 @@ function saveMovies(movies) {
   localStorage.setItem('movies', JSON.stringify(movies));
 }
 
-/********************************************************
- 3) Search Bar Functionality
-********************************************************/
+
 const searchForm = document.getElementById('searchForm');
 const searchInput = document.getElementById('searchInput');
 
@@ -82,9 +75,7 @@ if (searchInput) {
   });
 }
 
-/********************************************************
- 4) Create a Movie Card (Bootstrap Layout)
-********************************************************/
+
 function createMovieCard(movie, index) {
   const colDiv = document.createElement('div');
   colDiv.className = 'col-md-4 col-sm-6';
@@ -96,7 +87,7 @@ function createMovieCard(movie, index) {
   const imageDiv = document.createElement('div');
   imageDiv.className = 'movie-image';
   
-  // Build the poster URL: if poster_path exists, use it; otherwise, fallback.
+  // Build the poster URL: if poster_path exists, use it 
   let posterUrl = '';
   if (movie.poster_path) {
     posterUrl = getPosterUrl(movie.poster_path, 'w500');
@@ -158,9 +149,7 @@ function createMovieCard(movie, index) {
   return colDiv;
 }
 
-/********************************************************
- 5) Render Movies
-********************************************************/
+
 function renderMovies() {
   const moviesContainer = document.getElementById('moviesContainer');
   moviesContainer.innerHTML = '';
@@ -170,9 +159,7 @@ function renderMovies() {
   });
 }
 
-/********************************************************
- 6) Incorporate Static Movies (Optional)
-********************************************************/
+
 function incorporateStaticMovies() {
   const staticMovieElements = document.querySelectorAll('.row.g-5 .movie-item');
   const staticMovies = [];
@@ -204,9 +191,7 @@ function incorporateStaticMovies() {
   return staticMovies;
 }
 
-/********************************************************
- 7) Remove the Static Container to Prevent Duplicates
-********************************************************/
+
 function removeStaticContainer() {
   const staticContainer = document.querySelector('.row.g-5');
   if (staticContainer) {
@@ -214,9 +199,7 @@ function removeStaticContainer() {
   }
 }
 
-/********************************************************
- 8) Handle "Add Movie" Form Submission with TMDB Search
-********************************************************/
+
 const addMovieForm = document.getElementById('addMovieForm');
 if (addMovieForm) {
   addMovieForm.addEventListener('submit', (event) => {
@@ -253,9 +236,7 @@ if (addMovieForm) {
   });
 }
 
-/********************************************************
- 9) Global Movies Variable & Initial Initialization
-********************************************************/
+
 let movies = [];
 
 // First, fetch TMDB configuration. Once loaded, initialize movies.
