@@ -1,83 +1,99 @@
-.movie-image {
-    width: 100%;
-    aspect-ratio: 2 / 3; /* or remove this and set a fixed height */    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .custom-container {
-    max-width: 1000px; /* or any width you prefer */
-    margin: 0 auto;   /* centers the container */
-  }
-
-  .movie-item {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
-    background-color: #fff;
-  }
-  
-  .movie-info {
-    padding: 15px;
-  }
-
-  
-  /* Specific movie images */
-  .movie-titanic {
-    background-image: url('images/Titanic.jpg');
-  }
-  .movie-TheMatrix {
-    background-image: url('images/TheMatrix.jpg');
-  }
-  .movie-aquietplace {
-    background-image: url('images/AQuietPlace.jpg');
-  } 
-  .movie-avatar {
-    background-image: url('images/Avatar.jpg');
-  }
-  .movie-avengers {
-    background-image: url('images/Avengers.jpg');
-  }
-  .movie-cars {
-    background-image: url('images/Cars.jpg');
-  }
-  .movie-dune {
-    background-image: url('images/Dune.jpg');
-  }
-  .movie-interstellar {
-    background-image: url('images/Interstellar.jpg');
-  }
-  .movie-it {
-    background-image: url('images/It.jpg');
-  }
-  .movie-lalaland {
-    background-image: url('images/LaLaLand.jpg');
-  } 
-  .movie-tokyodrift {
-    background-image: url('images/TokyoDrift.jpg');
-  }
-  .movie-tronlegacy {
-    background-image: url('images/TronLegacy.jpg');
-  } 
   .movie-wolfofwallstreet {
     background-image: url('images/WolfOfWallStreet.jpg');
   }
-  .movie-thehangover {
-    background-image: url('images/TheHangover.jpg');
+
+.movie-image {
+  width: 100%;
+  aspect-ratio: 2 / 3; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-container {
+  max-width: 1000px; 
+  margin: 0 auto;   /*centers the container */
+}
+
+.movie-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+#moviesContainer .col-md-4 {
+  margin-bottom: 1.5rem; 
+}
+  
+  
+  
+  .movie-item {
+    border-radius: 8px;
+    transition: border 0.5s ease, box-shadow 0.5s ease;
   }
   
-  
-  
+  /* To Watch: Yellow accent */
   .movie-item[data-status="to-watch"] {
-    border: 2px solid #ffc107; /* Yellow border */
+    border: 3px solid #ffc107;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.6);
+    transform: scale(1.00); /* No scale by default */
   }
   
+  /* Watching: Blue accent */
   .movie-item[data-status="watching"] {
-    border: 2px solid #17a2b8; /* Blue border */
+    border: 3px solid #17a2b8;
+    box-shadow: 0 4px 8px rgba(23, 162, 184, 0.6);
+    transform: scale(1.00);
   }
   
+  /* Watched: Green accent */
   .movie-item[data-status="watched"] {
-    border: 2px solid #28a745; /* Green border */
+    border: 3px solid #28a745;
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.6);
+    transform: scale(1.02); /* Slightly larger when watched */
   }
+
+
+
+
+  /* Enhance all buttons with smooth transitions */
+.btn {
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* add movie button*/
+.btn-primary {
+  background-color: #097df2;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* remove movie button */
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+
+
+  
   
